@@ -32,7 +32,7 @@ const TransferBetween = () => {
     <DashboardLayout>
       <MiniIcons/>
         <div className='flex w-full items-center justify-between relative bg-green-100'>
-            {/* <div className='sidebar w-48 h-[70px] bg-red-100 absolute bottom-0 left-0'>
+            <div className='sidebar w-48 h-[70px] bg-red-100 absolute bottom-0 left-0'>
             <nav className='h-full mt-8'>
               <ul className=''>
                 {links.map((link)=>(
@@ -47,7 +47,7 @@ const TransferBetween = () => {
                
                 </ul>
             </nav>
-            </div> */}
+            </div>
             {/* <div>
                 randy
             </div> */}
