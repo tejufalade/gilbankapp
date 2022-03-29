@@ -24,12 +24,12 @@ const Dashboard = () => {
         {
             id: 2,
             name: 'Local transfer',
-            linkTo: '/local'
+            linkTo: '/send-local'
         },
         {
             id: 3,
             name: 'International transfer',
-            linkTo: '/abroad'
+            linkTo: '/send-abroad'
         },
         {
             id: 4,
@@ -40,7 +40,7 @@ const Dashboard = () => {
   return (
    <DashboardLayout>
        <MiniIcons/>
-       <div className='h-[85vh] px-8' >
+       <div className='h-full px-8' >
            <h2 className='mt-6 text-[25px] font-bold'>Welcome Helen,</h2>
            <div className='mt-4 w-full flex justify-between items-center'>
                {cards.map((card)=>(

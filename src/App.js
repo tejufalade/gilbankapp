@@ -4,10 +4,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import Hero from './Components/Hero';
-import Registration from './Components/Registration';
-import Dashboard from './Components/Dashboard';
-import TransferBetween from './Components/TransferBetween';
+import {Hero, Registration, Dashboard, SendLocal, TransferBetween, AbroadTransfers} from "./Components"
 
 function App() {
   return (
@@ -19,6 +16,8 @@ function App() {
       <Route path='/register' element={<Registration/>} />
       <Route path='/dashboard' element={<Dashboard/>} />
       <Route path='/transfer' element={<TransferBetween/>}/>
+      <Route path='/send-local' element={<SendLocal/>}/>
+      <Route path='/send-abroad' element={<AbroadTransfers/>}/>
     </Routes>
 
     </BrowserRouter>
