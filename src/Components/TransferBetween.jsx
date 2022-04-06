@@ -17,7 +17,7 @@ const TransferBetween = () => {
         <div className='flex sidebar-section w-full justify-between relative  bg-white'>
            <Sidebar />
           <div className='w-full px-6 py-4'>
-            <h2 className='ml-12 mt-8'>Transfer between accounts</h2>
+            <h2 className='ml-8 mt-8'>Transfer between accounts</h2>
             <form className='flex flex-col py-4 px-8' onSubmit={handleSubmit}>
               <label className='flex flex-col mt-2'>
                   <span className='text-[12px] flex flex-col'>
@@ -72,7 +72,7 @@ const TransferBetween = () => {
                     Current Account
                     </span>
                     <span>
-                      367.145
+                      £367.145
                     </span>
                   </span>
                     <input 
@@ -85,7 +85,7 @@ const TransferBetween = () => {
                   <label htmlFor='account' className='flex items-center justify-between w-80 bg-grey py-3 px-4 rounded-md shadow-md text-black'>
                     <span className='flex flex-col'>
                     <span>Savings Account</span>
-                    <span>1967.20</span>
+                    <span>£1967.20</span>
                     </span>
                     <input 
                   required
@@ -109,7 +109,7 @@ const TransferBetween = () => {
                    Current Account
                    </span>
                    <span>
-                     367.145
+                     £367.145
                    </span>
                  </span>
                    <input 
@@ -122,7 +122,7 @@ const TransferBetween = () => {
                  <label htmlFor='account' className='flex items-center justify-between w-80 bg-grey py-3 px-4 rounded-md shadow-md text-black'>
                    <span className='flex flex-col'>
                    <span>Savings Account</span>
-                   <span>1967.20</span>
+                   <span>£1967.20</span>
                    </span>
                    <input 
                  required

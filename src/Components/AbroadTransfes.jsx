@@ -17,7 +17,7 @@ const AbroadTransfes = () => {
     <div className="flex sidebar-section w-full justify-between relative  bg-white">
         <Sidebar />
         <div className="w-full px-6 py-4">
-            <h2 className="ml-12 mt-8">Abroad Transfers</h2>
+            <h2 className="ml-8 mt-8">Abroad Transfers</h2>
             <form
                 className="flex flex-col py-4 px-8"
                 onSubmit={handleSubmit}
