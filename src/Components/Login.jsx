@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 const Login = () => {
 
-    const [visible, setVisible] = useState(true)
+    const [visible ] = useState(true)
     const navigate = useNavigate()
     const handleSubmit = (e) =>{
         e.preventDefault()

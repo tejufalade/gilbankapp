@@ -4,3 +4,4 @@ export {default as SendLocal } from './SendLocal'
 export {default as TransferBetween } from './TransferBetween'
 export {default as Hero } from './Hero'
 export { default as AbroadTransfers } from "./AbroadTransfes"
+export { default as TransactionHistory } from "./History"

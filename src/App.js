@@ -4,7 +4,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import {Hero, Registration, Dashboard, SendLocal, TransferBetween, AbroadTransfers} from "./Components"
+import {Hero, Registration, Dashboard, SendLocal, TransferBetween, AbroadTransfers, TransactionHistory } from "./Components"
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
       <Route path='/transfer' element={<TransferBetween/>}/>
       <Route path='/send-local' element={<SendLocal/>}/>
       <Route path='/send-abroad' element={<AbroadTransfers/>}/>
+      <Route path='/history' element={<TransactionHistory/>}/>
     </Routes>
 
     </BrowserRouter>
