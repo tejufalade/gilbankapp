@@ -12,7 +12,7 @@ const HeaderTwo = () => {
             <ul className='flex justify-between items-center'>
                 <li><Link to='/'>Contact us</Link></li>
                 <li><Link to='/'>Search</Link></li>
-                <li><Link to='/'>Profile</Link></li>
+                <li><Link to='/profile'>Profile</Link></li>
                 
             </ul>
            

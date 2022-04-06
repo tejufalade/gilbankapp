@@ -3,6 +3,7 @@ import React,{useState} from 'react'
 import MainLayout from '../Layout/MainLayout'
 import { Link } from 'react-router-dom'
 import Login from './Login'
+import BankOffers  from './BankOffers'
 
 const Hero = () => {
   const [open, setOpen] = useState(false)
@@ -23,7 +24,7 @@ const Hero = () => {
             </div>
         </div>
         <div className=''>
-            
+            {/* <BankOffers /> */}
         </div>
     </div>
     </MainLayout>
