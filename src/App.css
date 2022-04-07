@@ -16,6 +16,20 @@
 .sidebar-section {
     height: calc(100vh-10rem);
 }
-/* .sidebar {
-    min-height: 70vh;
-} */
+.hero-img{
+    background: url("./Images/hero-pic.jpg"), linear-gradient(to right, #e5e5e567, #eeeeee73);
+    background-position: center;
+    background-blend-mode: overlay;
+    background-position-x: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero-img:hover{
+    background: url("./Images/hero-pic.jpg"),linear-gradient(to right, #e5e5e565, #fafafac7);
+    background-position: center;
+    background-blend-mode: overlay;
+    background-position-x: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}

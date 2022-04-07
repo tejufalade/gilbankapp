@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 import DashboardLayout from "../Layout/DashboardLayout";
 import { Dialog, Transition } from "@headlessui/react";
-import MiniIcons from "./MiniIcons";
+
 
 const AbroadTransfes = () => {
   const [isOpen, setIsOpen] = useState(false);

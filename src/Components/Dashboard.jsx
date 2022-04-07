@@ -1,7 +1,11 @@
-import React from 'react'
+import {useContext} from 'react'
 import DashboardLayout from '../Layout/DashboardLayout'
 import { Link } from 'react-router-dom'
+import { AppContext } from '../Context/AppContext'
+
+
 const Dashboard = () => {
+    const { user } = useContext(AppContext)
 
     const cards = [
         {
@@ -39,7 +43,7 @@ const Dashboard = () => {
   return (
    <DashboardLayout>
        <div className='h-full px-8 py-10' >
-           <h2 className='text-[25px] font-bold'>Welcome Helen,</h2>
+           <h2 className='text-[25px] font-bold'>Welcome {" "} {user.firstName},</h2>
            <div className='mt-4 w-full flex justify-between items-center'>
                {cards.map((card)=>(
              <div key={card.title} className='w-[680px] h-56 flex flex-col content-center justify-center px-8 bg-gradient-to-r from-sky-500 to-[#0B72AB] shadow-lg'>
