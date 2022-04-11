@@ -12,16 +12,17 @@ const Header = () => {
 			</div>
 			<nav className="w-1/2 relative">
 				<ul className="flex justify-between items-center">
-					<li>
-						<Link to="/register">
-							Register
-						</Link>
-					</li>
+					
 					<li>
 						<Link to="/">Search</Link>
 					</li>
 					<li>
 						<Link to="/help">Help</Link>
+					</li>
+					<li>
+						<Link to="/register">
+							Register
+						</Link>
 					</li>
 					<li
 						className="w-24 h-10 p-2 bg-[#4BBDFD] rounded-md text-white flex items-center justify-center font-semibold cursor-pointer hover:bg-[#01659D]"
