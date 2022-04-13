@@ -14,7 +14,7 @@ const AbroadTransfes = () => {
      
       <div className="flex sidebar-section w-full justify-between relative">
       <div className="flex flex-col px-6 py-4 mx-auto w-[600px] border-2 my-4 rounded-lg">
-          <h2 className="text-center mt-8">International Transfers</h2>
+          <h2 className="text-center mt-8">International Transfer</h2>
           <form className="flex flex-col self-center py-4 px-8" onSubmit={handleSubmit}>
             <label className="flex flex-col mt-2">
               <span className="text-[12px] flex flex-col">

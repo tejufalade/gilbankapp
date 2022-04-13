@@ -13,7 +13,7 @@ const SendLocal = () => {
     <DashboardLayout>
       <div className="flex sidebar-section w-full justify-between relative">
         <div className="flex flex-col px-6 py-4 mx-auto w-[600px] border my-4 rounded-lg">
-          <h2 className="mt-8 text-center">Send Money(Local)</h2>
+          <h2 className="mt-8 text-center">Local Transfer</h2>
           <form
             className="flex flex-col py-4 px-8 self-center"
             onSubmit={handleSubmit}

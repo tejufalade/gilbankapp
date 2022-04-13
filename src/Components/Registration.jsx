@@ -106,7 +106,7 @@ const Registration = ({ auth }) => {
                 type="submit"
                 className="bg-skyblue text-white w-32 h-12 flex justify-center items-center rounded-md mt-4 mb-8"
               >
-                Resgister
+                Register
               </button>
               <p>
                 Already have an account?{" "}
