@@ -1,13 +1,20 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import DashboardLayout from '../Layout/DashboardLayout'
+import { AppContext } from "../Context/AppContext";
+import {Link} from "react-router-dom" 
+
 const Profile = () => {
+  const {user } = useContext(AppContext);
+
+  // const handleLogout = () => localStorage.removeItem(user.account_number)
+   
   return (
     <DashboardLayout>
         <div className='pt-10 px-8 flex flex-col items-center justify-center'>
         <h1 className='text-[20px] mb-6'>Profile</h1>
         <div className='bg-white w-[700px] flex flex-col items-center justify-center py-4 rounded-md'>
-            <p className='mb-2'>Helen Adeyemo</p>
-            <p>Account Number:0160972659</p>
+            <p className='mb-2'>{user.userName}</p>
+            <p>Account Number:{user.account_number}</p>
         </div>
         <div className='bg-white w-[700px] flex flex-col justify-center mt-2 py-4 rounded-md'>
           <div className='border-b-2 border-black w-full px-4'>
@@ -31,6 +38,7 @@ const Profile = () => {
 
               
                 <p className='px-4 py-2  mt-4'>Email:  <a href="mailto:toimander@gmail.com" className='ml-3 text-navyblue'>toimander@gmail.com</a></p>
+                <Link to="/" className='px-4 text-red-600'>Log out</Link>
         </div>
         </div>
            
