@@ -7,7 +7,7 @@ const DashboardLayout = ({children}) => {
   return (
     <>
     <HeaderTwo/>
-    <div className='bg-[#f5f5f5] w-screen pb-16'>
+    <div className='bg-[#f5f5f5] w-screen pb-16 h-auto'>
         {children}
     </div>
     <Footer/>
