@@ -1,9 +1,44 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import DashboardLayout from "../Layout/DashboardLayout";
 import { Dialog, Transition } from "@headlessui/react";
+import axios from "axios";
 
 const TransferBetween = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [amount, setAmount] = useState(0);
+  const [convertedAmount, setConvertedAmount] = useState(0);
+  const [currency, setCurrency] = useState('USD');
+  //const [currency2, setCurrency2] = useState('EUR');
+  const [recepient, setRecepient] = useState('')
+  const [rates, setRates] = useState([])
+
+  const APIKEY = '0e8494c17aae6d5eb2f70ab5'
+
+  useEffect(() => {
+    try {
+      axios.get(`https://v6.exchangerate-api.com/v6/${APIKEY}/latest/GBP`)
+      .then(res =>{console.log(res.data.conversion_rates) 
+        setRates(res.data.conversion_rates)
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }, [currency, amount, convertedAmount]);
+
+  const onAmountChange = (amountInput) => {
+    setConvertedAmount((amountInput * rates[currency]).toFixed(4))
+    setAmount(amountInput)
+  }
+
+  const onConvertedAmountChange = (value) => {
+    setAmount((value / rates[currency] * rates['GBP']).toFixed(3))
+    setConvertedAmount(value)
+  }
+
+  const onCurrencyChange = (currencyValue) => {
+    setCurrency(currencyValue)
+    setConvertedAmount(amount * rates[currencyValue])
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,6 +65,8 @@ const TransferBetween = () => {
                 name="amount"
                 type="text"
                 className="border-none p-2 mt-2 rounded-md w-96 focus:border focus:ring-0  focus:outline-none focus:border-grey bg-grey shadow-md"
+                value={amount}
+                onChange={(e) => onAmountChange(e.target.value)}
               />
             </label>
             <label className="flex flex-col mt-4">
@@ -43,6 +80,7 @@ const TransferBetween = () => {
                 name="currency"
                 id="currency"
                 className="border-none p-2 mt-2 rounded-md w-96 focus:border focus:ring-0  focus:outline-none focus:border-grey bg-neutral-100 shadow-sm"
+                onChange={(e)=> onCurrencyChange(e.target.value)}
               >
                 <option value="USD">United State Dollar (USD)</option>
                 <option value="EUR">Euro (EUR)</option>
@@ -58,6 +96,8 @@ const TransferBetween = () => {
                 name="converter"
                 type="text"
                 className="border-none p-2 mt-2 rounded-md w-96 focus:border focus:ring-0  focus:outline-none focus:border-grey bg-grey shadow-md"
+                value={convertedAmount}
+                onChange={(e) => onConvertedAmountChange(e.target.value)}
               />
             </label>
             <label className="flex flex-col mt-4 w-[500px] ">

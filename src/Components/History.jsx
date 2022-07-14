@@ -14,6 +14,12 @@ const History = () => {
   };
   const historyData = [
     {
+      date: '15 June 2022',
+      beneficiary: "Helen Adeyemo",
+      amount: "$200",
+      status: "transfer"
+    },
+    {
       date: '28 March 2022',
       beneficiary: "John Bloke",
       amount: "$150",
